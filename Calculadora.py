@@ -1,3 +1,5 @@
+#Pratica antiga, possui falah grave desegurança
+
 from tkinter import *
 from tkinter import ttk
 
@@ -22,6 +24,7 @@ class Funcs():
         self.tx_cont.insert(INSERT, f'{conta} = ')
         self.tx_cont.config(state= DISABLED)
         try:
+            #refatorar isto aqui, falha grave
             resul = eval(conta)
             self.tx_vis.config(state=NORMAL)
             self.tx_vis.delete(1.0, END)
@@ -120,5 +123,6 @@ class App(Funcs):
         self.bt_n8.place(relx= 0.19, rely= 0.53, relwidth= 0.15, relheight= 0.15)
         self.bt_n9.place(relx= 0.36, rely= 0.53, relwidth= 0.15, relheight= 0.15)
         self.bt_n0.place(relx= 0.19, rely= 0.7, relwidth= 0.15, relheight= 0.15)
+
 
 App()
