@@ -54,6 +54,7 @@ def gerar_tabela_calibracao(maxi:float, mini:float, unit:str):
 
     console.print(table)
 
-system("clear")
-vale = gerar_tabela_calibracao(0, 4000, "mmH2O")
+if __name__ == "__main__":
+    system("clear")
+    vale = gerar_tabela_calibracao(4000, -4000, "mmH2O")
 
