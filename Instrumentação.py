@@ -1,5 +1,6 @@
 from rich.console import Console
 from rich.table import Table
+from os import system
 
 def calcular_ma(maxi:float, mini:float, read:float):
     """Calcula os valores lidos de ma para seu equivalente na unidade do range
@@ -53,5 +54,6 @@ def gerar_tabela_calibracao(maxi:float, mini:float, unit:str):
 
     console.print(table)
 
-vale = gerar_tabela_calibracao(30, -25, "Psi")
+system("clear")
+vale = gerar_tabela_calibracao(0, 4000, "mmH2O")
 
