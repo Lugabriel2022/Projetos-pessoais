@@ -54,7 +54,28 @@ def gerar_tabela_calibracao(maxi:float, mini:float, unit:str):
 
     console.print(table)
 
+def calcular_densidade(massa, volume):
+    densidade = massa / volume
+    return densidade
+
+def pressao_diferencial(h, d):
+    """calculo depressão diferencial
+
+    Args:
+        h (Altura do fluido): nivel do fluido no tanque.
+        d (densidade relativa): densidaderelativado produto em relação a agua
+
+    Returns:
+        pressão diferencial: diferneçaentre a pressão do produto e a daagua
+    """
+    delta_p = h * d
+    return delta_p
+
 if __name__ == "__main__":
     system("clear")
     vale = gerar_tabela_calibracao(4000, -4000, "mmH2O")
+    print(calcular_densidade(0.994, 10))
+    print(pressao_diferencial(1000, 1))
+    print(pressao_diferencial(9000, 1))
 
+# delta_p = altura * densidade relativa
