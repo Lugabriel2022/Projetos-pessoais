@@ -109,11 +109,11 @@ def lei_ohm(U: float = None, R: float = None, I: float = None):
     Returns:
         float: retorna a grandeza faltante
     """
-    if U == None:
+    if U is None:
         return R * I
-    elif R == None:
+    elif R is None:
         return U / I
-    elif I == None:
+    elif I is None:
         return U / R
 
 
@@ -129,6 +129,19 @@ def calculo_range_closetq(altura_tq: float, altura_coluna: float, densidade: flo
         float: valor de range
     """
     return (altura_tq * densidade) - (altura_coluna * densidade)
+
+def calculo_area(comprimento: float, altura: float, largura: float):
+    """calculo de volume de um recipiente
+
+    Args:
+        comprimento (float): comprimento do recipiente
+        altura (float): altura do recipiente
+        largura (float): largura do recipiente
+
+    Returns:
+        float: volume do recipiente
+    """
+    return comprimento * altura * largura
 
 
 if __name__ == "__main__":
